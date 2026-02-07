@@ -1,0 +1,19 @@
+java 8 features {
+    lambda
+    functional
+    method ref
+    default & static
+    stream api
+    datetime api
+    Optional class
+    Collector and collect 
+}
+jdbc{
+    importance
+    load & register the driver
+    create a connection
+    create a statement
+    Excute query
+    process result using resultSet
+    close the resource
+}
