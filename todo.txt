@@ -17,3 +17,22 @@ jdbc{
     process result using resultSet
     close the resource
 }
+
+Assertion{
+    assertEquals
+    assertTrue
+    assertFalse
+    assertThrows
+    assertNull
+    AssertNotNull
+    assertSame
+    assertNotsme
+}
+
+Annotation {
+    @Test
+    @BeforeEach
+    @BeforeAll
+    @AfterAll
+    @AfterEach
+}
