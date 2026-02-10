@@ -35,4 +35,24 @@ Annotation {
     @BeforeAll
     @AfterAll
     @AfterEach
+
+    @parameterisedtest
+    @csvSource
+
+    @MethodSource
+    Stream<Argument>
+    @valueSource
+}
+
+spring {
+    hibernate
+    spring Core 
+    mvc
+    rest 
+    boot 
+    secority 
+    cloud 
+    Messaging query
+    Git & github
+    Docker
 }

@@ -62,9 +62,7 @@ public class StudentServiceTest {
 
     @Test
     void testAssertThrows() {
-        assertThrows(IllegalArgumentException.class, () -> {
-            Integer.parseInt("abc");
-        });
+        assertThrows(IllegalArgumentException.class, () -> ss.isEligible(-1));
     }
 
     @Test
