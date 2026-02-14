@@ -1,3 +1,9 @@
+
+junit
+mockito
+HIbernate Core
+hibernate Mapping
+
 java 8 features {
     lambda
     functional
@@ -56,3 +62,4 @@ spring {
     Git & github
     Docker
 }
+
