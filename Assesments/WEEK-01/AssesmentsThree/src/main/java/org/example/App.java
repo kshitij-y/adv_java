@@ -3,9 +3,8 @@ package org.example;
 
 import org.example.entity.MenuItem;
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import org.hibernate.engine.transaction.internal.TransactionImpl;
+
 
 import java.util.List;
 import java.util.Scanner;
@@ -90,7 +89,7 @@ public class App {
         try {
 
             System.out.print("Enter ID to update: ");
-            Long id = scanner.nextLong();
+            int id = scanner.nextInt();
 
             MenuItem item = session.get(MenuItem.class, id);
 
@@ -131,7 +130,7 @@ public class App {
         try {
 
             System.out.print("Enter ID to delete: ");
-            Long id = scanner.nextLong();
+            int id = scanner.nextInt();
 
             MenuItem item = session.get(MenuItem.class, id);
 
