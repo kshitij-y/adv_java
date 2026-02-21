@@ -1,0 +1,8 @@
+one-to-one
+one-many
+many-one
+many-many
+
+fetchtype -> eager , lazy
+,m,,.mmnkjmnAvinash dhanuka
+Avinash dhanuka
