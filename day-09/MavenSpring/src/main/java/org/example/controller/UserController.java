@@ -32,13 +32,16 @@ public class UserController {
     }
 
     @GetMapping("/user/{id}")
-    public String getUser(@PathVariable Long id, Model model){
+    public String getUser(@PathVariable("id") Long id, Model model){
         model.addAttribute("user", userService.getUserById(id));
         return "userDetail";
     }
 
     @PostMapping("addUser")
-    public String addUser(@RequestParam String name, @RequestParam String email){
+    public String addUser(
+            @RequestParam("name") String name,
+            @RequestParam("email") String email
+    ){
         Long newId = (long) (Math.random()* 1000);
         userService.addUSer(new User(newId, name, email));
         return "redirect:/users";

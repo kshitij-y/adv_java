@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Books</title>
+</head>
+<body>
+
+<h2>All Books</h2>
+
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Actions</th>
+    </tr>
+
+    <!-- If books exist -->
+    <tr th:each="book : ${books}" th:if="${!#lists.isEmpty(books)}">
+        <td th:text="${book.id}"></td>
+        <td th:text="${book.title}"></td>
+        <td th:text="${book.author}"></td>
+        <td th:text="${book.price}"></td>
+        <td>
+            <a th:href="@{/book/view/{id}(id=${book.id})}">View</a> |
+            <a th:href="@{/book/delete/{id}(id=${book.id})}">Delete</a>
+        </td>
+    </tr>
+
+    <!-- If no books -->
+    <tr th:if="${#lists.isEmpty(books)}">
+        <td colspan="5" style="text-align:center;">
+            No books available.
+        </td>
+    </tr>
+
+</table>
+
+<br/>
+<a th:href="@{/user/dashboard}">Back to Dashboard</a>
+
+</body>
+</html>
